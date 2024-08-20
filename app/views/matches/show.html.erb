@@ -1,0 +1,13 @@
+<div class="container mx-auto px-4">
+  <h1 class="text-3xl font-bold mb-4">Match Details</h1>
+
+  <div class="bg-white shadow-md rounded px-8 pt-6 pb-8 mb-4">
+    <h2 class="text-xl font-bold mb-2"><%= @match.player1_name %> vs <%= @match.player2_name %></h2>
+    <p>Date: <%= @match.date %></p>
+    <p>Score: <%= @match.player1_score %> - <%= @match.player2_score %></p>
+    <p>Winner: <%= @match.winner %></p>
+    <p>Time Played: <%= @match.time_played %> seconds</p>
+  </div>
+
+  <%= link_to 'Back to Matches', matches_path, class: 'bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded' %>
+</div>
