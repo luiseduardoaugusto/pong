@@ -1,3 +1,4 @@
+<!-- Start of Selection -->
 <div class="container mx-auto px-4" data-controller="match">
   <h1 class="text-3xl font-bold mb-4">New Ping Pong Match</h1>
 
@@ -27,8 +28,11 @@
     <div class="text-center">
       <button data-match-target="saveButton" data-action="click->match#saveMatch" class="bg-green-500 hover:bg-green-700 text-white font-bold py-2 px-4 rounded" disabled>Save Match</button>
     </div>
+
+    <!-- New element to show winner notice -->
+    <div data-match-target="winnerNotice" class="mt-4 text-lg font-semibold text-green-600 hidden"></div>
   </div>
 </div>
 
-
 <%= link_to 'Back to Matches', matches_path, class: 'inline-block bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded transition duration-300' %>
+<!-- End of Selection -->

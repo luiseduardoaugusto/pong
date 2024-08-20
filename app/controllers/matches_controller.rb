@@ -12,11 +12,9 @@ class MatchesController < ApplicationController
 
     respond_to do |format|
       if @match.save
-        format.html { redirect_to @match, notice: 'Match was successfully created.' }
         format.json { render json: @match, status: :created }
       else
-        format.html { render :new }
-        format.json { render json: @match.errors, status: :unprocessable_entity }
+        format.json { render json: { errors: @match.errors.full_messages }, status: :unprocessable_entity }
       end
     end
   end
