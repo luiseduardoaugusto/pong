@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html>
+<html class="h-full">
   <head>
     <title>Ping Pong Counter</title>
     <meta name="viewport" content="width=device-width,initial-scale=1">
@@ -7,10 +7,13 @@
     <%= csp_meta_tag %>
 
     <%= stylesheet_link_tag "application", "data-turbo-track": "reload" %>
+    <%= stylesheet_link_tag "tailwind", "inter-font", "data-turbo-track": "reload" %>
     <%= javascript_importmap_tags %>
   </head>
 
-  <body class="bg-gray-100">
-    <%= yield %>
+  <body class="min-h-screen bg-gray-100 flex flex-col">
+    <div class="flex-grow container mx-auto px-4 py-8 max-w-4xl">
+      <%= yield %>
+    </div>
   </body>
 </html>
