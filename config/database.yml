@@ -81,6 +81,7 @@ test:
 #
 production:
   <<: *default
+  url: <%= ENV["DATABASE_URL"] %>
   database: pong_production
   username: pong
   password: <%= ENV["PONG_DATABASE_PASSWORD"] %>
