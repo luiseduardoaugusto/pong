@@ -21,3 +21,6 @@ services:
         sync: false
       - key: WEB_CONCURRENCY
         value: 2 # sensible default
+    build:
+      - name: Build assets
+        command: bundle exec rails assets:precompile
